@@ -1,0 +1,11 @@
+Dear Tier-2 Team,  
+
+We have detected a critical ransomware incident on Server-X. Wazuh flagged malicious file activity (crypto_locker.exe) originating from IP 192.168.1.50. Indicators suggest active encryption attempts. Current impact: user files are being locked.  
+
+Immediate containment is recommended. Please investigate lateral movement, block malicious IPs, and isolate the affected host. Related MITRE ATT&CK mapping: T1486 (Data Encrypted for Impact).  
+
+I have logged a case in TheHive (#INC-2025-01). Screenshots and logs are attached.  
+
+Regards,  
+K.Sai Sidhartha
+SOC Tier-1 Analyst
