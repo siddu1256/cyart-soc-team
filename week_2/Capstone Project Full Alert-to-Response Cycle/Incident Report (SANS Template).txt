@@ -1,0 +1,25 @@
+Executive Summary
+
+On August 28, 2025, I carried out a security exercise to test the full alert-to-response cycle in our lab. Using Metasploit, I exploited the well-known vsftpd 2.3.4 backdoor on a Metasploitable2 virtual machine. The attack traffic was picked up by Wazuh, which raised an alert indicating an FTP exploitation attempt. From there, I followed the triage and response workflow: I confirmed the alert, verified the source IP, and then used CrowdSec to block the attacker’s system from making further connections. The incident was contained quickly and safely without any real impact since this was a controlled test.
+
+Timeline
+
+11:00 AM – Exploit attempt launched from 192.168.223.133.
+
+11:01 AM – Wazuh flagged unusual FTP activity.
+
+11:02 AM – Alert reviewed and confirmed.
+
+11:05 AM – Attacker’s IP blocked in CrowdSec.
+
+11:10 AM – Follow-up check showed the block was successful.
+
+Recommendations
+
+Avoid running outdated services like vsftpd in production.
+
+Keep Wazuh monitoring rules updated for network-facing services.
+
+Regularly patch systems and schedule vulnerability scans.
+
+Continue practicing red-team style simulations to validate detection and response.
